@@ -7,7 +7,7 @@
 # Quick start (the two most-used commands):
 #
 #   Check the longest extension currently available, without buying anything:
-#     ./extend_training_plan.sh search --plan-name b300 --max-days 90 --profile lumen
+#     ./extend_training_plan.sh search --plan-name b300 --max-days 182 --profile lumen
 #
 #   Find the longest extension up to a cap and purchase it after confirming:
 #     ./extend_training_plan.sh auto --plan-name b300 --max-days 30 --profile lumen

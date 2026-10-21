@@ -21,10 +21,10 @@ The script checks for both on startup and exits with an install hint if either i
 
 ```bash
 # Check the longest extension currently available, without buying anything
-./extend_training_plan.sh search --plan-name <your-plan-name> --max-days 90 --profile <your-profile>
+./extend_training_plan.sh search --plan-name <your-plan-name> --max-days 182 --profile <your-profile>
 
 # Find the longest extension up to a cap and purchase it after confirming
-./extend_training_plan.sh auto --plan-name <your-plan-name> --max-days 30 --profile <your-profile>
+./extend_training_plan.sh auto --plan-name <your-plan-name> --max-days 182 --profile <your-profile>
 ```
 
 ## Subcommands
