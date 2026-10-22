@@ -67,15 +67,16 @@
 # timestamped file under ./logs, in addition to the terminal (works on any subcommand):
 #   ./extend_training_plan.sh auto --plan-name b300 --max-days 182 --save-logs
 #
-# Defaults / env overrides: PROFILE (default "default"), REGION (default us-west-2)
+# Defaults / env overrides: AWS_PROFILE (default "default"), AWS_REGION (default us-west-2)
+# -- same env vars boto3/AWS CLI already use, so this matches your existing AWS setup.
 
 set -euo pipefail
 
-PROFILE="${PROFILE:-default}"
-REGION="${REGION:-us-west-2}"
+AWS_PROFILE="${AWS_PROFILE:-default}"
+AWS_REGION="${AWS_REGION:-us-west-2}"
 
 aws_cli() {
-    aws --profile "$PROFILE" --region "$REGION" "$@"
+    aws --profile "$AWS_PROFILE" --region "$AWS_REGION" "$@"
 }
 
 usage() {
@@ -363,8 +364,8 @@ main() {
     local rest=() save_logs="false"
     while [[ $# -gt 0 ]]; do
         case "$1" in
-            --profile) PROFILE="$2"; shift 2 ;;
-            --region) REGION="$2"; shift 2 ;;
+            --profile) AWS_PROFILE="$2"; shift 2 ;;
+            --region) AWS_REGION="$2"; shift 2 ;;
             --save-logs) save_logs="true"; shift ;;
             *) rest+=("$1"); shift ;;
         esac

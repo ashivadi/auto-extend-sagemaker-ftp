@@ -104,10 +104,12 @@ Save this run's full output (progress + AWS CLI/JSON output) to a timestamped fi
 
 ## Defaults / env overrides
 
+These are the same environment variables boto3/AWS CLI already use, so the script picks up your existing AWS setup automatically.
+
 | Variable | Default | Flag override |
 |---|---|---|
-| `PROFILE` | `default` | `--profile` |
-| `REGION` | `us-west-2` | `--region` |
+| `AWS_PROFILE` | `default` | `--profile` |
+| `AWS_REGION` | `us-west-2` | `--region` |
 
 ## Constraints
 
