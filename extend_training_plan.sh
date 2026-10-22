@@ -7,10 +7,10 @@
 # Quick start (the two most-used commands):
 #
 #   Check the longest extension currently available, without buying anything:
-#     ./extend_training_plan.sh search --plan-name b300 --max-days 182 --profile lumen
+#     ./extend_training_plan.sh search --plan-name b300 --max-days 182 --profile <aws-profile> --region <aws-region> 
 #
 #   Find the longest extension up to a cap and purchase it after confirming:
-#     ./extend_training_plan.sh auto --plan-name b300 --max-days 30 --profile lumen
+#     ./extend_training_plan.sh auto --plan-name b300 --max-days 182 --profile <aws-profile>  --region <aws-region>
 #
 # Subcommands map 1:1 to the SageMaker API actions:
 #   list    -> ListTrainingPlans                    (what plans exist today)
